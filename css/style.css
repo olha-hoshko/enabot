@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
+
+:root {
+    --dark-color: #000000;
+    --light-color: #FFFFFF;
+    --blue-color: #079FD0;
+    --header-color: #C4C4C4AD;
+    --footer-color: #C4C4C433;
+    --font-family: 'Montserrat', sans-serif;
+    --font-light: 300;
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-semi-bold: 600;
+    --size-header-nav: 12px;
+    --size-footer-nav: 18px;
+    --size-h1: 270px;
+    --size-h2: 48px;
+    --size-h3: 30px;
+    --size-p: 24px;
+    --size-p-small: 20px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    width: 100%;
+    background-color: var(--light-color);
+    font-family: var(--font-family);
+    font-weight: var(--font-regular);
+    box-sizing: border-box;
+}
+
+h1, h2, h3 {
+    font-weight: var(--font-regular);
+}
+
+h1 {
+    font-size: var(--size-h1);
+    line-height: calc(var(--size-h1) - 4vw);
+    color: var(--dark-color);
+    letter-spacing: -0.05em;
+    text-transform: lowercase;
+}
+
+h2, h3 {
+    color: var(--blue-color);
+}
+
+h2 {
+    width: 35vw;
+    font-size: var(--size-h2);
+    line-height: calc(var(--size-h2) + 0.3vw);
+}
+
+h3 {
+    width: 22vw;
+    font-size: var(--size-h3);
+    line-height: calc(var(--size-h3) + 0.3vw);
+    margin-top: 3vw;
+}
+
+nav ul {
+    display: flex;
+    gap: 1.6vw;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: var(--dark-color);
+    text-decoration: none;
+}
+
+a:hover, button:hover {
+    cursor: pointer;
+}
+
+header, main {
+    margin: 0 3.5vw;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 3.5vw;
+    padding: 1.2vw 0;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    gap: 3vw;
+}
+
+.logo {
+    width: auto;
+    height: 1.6vw;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+}
+
+header nav a {
+    font-weight: var(--font-medium);
+    font-size: var(--size-header-nav);
+    text-transform: uppercase;
+}
+
+button {
+    font-family: var(--font-family);
+    border: none;
+    text-transform: uppercase;
+}
+
+header button {
+    width: 13.5vw;
+    height: 100%;
+    background-color: var(--blue-color);
+    color: var(--light-color);
+    font-weight: var(--font-semi-bold);
+    font-size: var(--size-header-nav);
+    border-radius: 10px;
+}
+
+.main-background {
+    position: relative;
+    height: calc(100vh - 15vh);
+    margin-right: 15vw;
+    background-color: var(--header-color);
+}
+
+.main-background > section {
+    display: flex;
+    flex-direction: column;
+    padding: 6vw 8vw;
+    gap: 2.6vw;
+}
+
+.main-background > section > p, .main-background > section > h2 {
+    color: var(--light-color);
+    font-weight: var(--font-medium);
+}
+
+.main-background > section > h2 {
+    text-transform: uppercase;
+}
+
+.main-background > section > p {
+    width: 20vw;
+    text-transform: lowercase;
+    font-size: var(--size-p);
+    line-height: calc(var(--size-p) + 0.5vw);
+    margin: 0;
+}
+
+main aside {
+    position: absolute;
+    right: -15vw;
+    top: 50%;
+    transform: translate(0, -50%);
+    z-index: 2;
+}
+
+main aside img {
+    width: 40vw;
+    height: auto;
+}
+
+main > div:not(:first-of-type) {
+    margin-top: 7vw;
+    height: 31vw;
+}
+
+main > div:not(:first-of-type) img {
+    width: 50%;
+    height: auto;
+}
+
+.ebo-info {
+    display: inline-block; 
+    padding-left: 9vw;
+    width: 35vw;
+}
+
+main > div:nth-child(2) img {
+    float: left;
+}
+
+main > div:nth-child(3) img {
+    float: right;
+}
+
+main > div:not(:first-of-type) p, main section p {
+    color: var(--dark-color);
+    font-weight: var(--font-light);
+    margin: 2.5vw 0;
+}
+
+main > div:not(:first-of-type) p {
+    font-size: var(--size-p);
+    line-height: calc(var(--size-p) + 0.9vw);
+}
+
+main button {
+    background-color: var(--light-color);
+    color: var(--blue-color);
+    font-size: calc(var(--size-p) - 0.4vw);
+    font-weight: var(--font-medium);
+}
+
+main > section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main > section > h2 {
+    width: 100%;
+    text-align: center;
+    margin: 6vw 0;
+}
+
+.additional-functions {
+    display: flex;
+    gap: 5vw;
+}
+
+
+.additional-functions section {
+    flex: 1;
+}
+
+.additional-functions img {
+    width: 100%;
+    height: 21vw;
+    object-fit: cover;
+}
+
+.additional-functions p {
+    width: 20vw;
+    font-size: var(--size-p-small);
+    line-height: calc(var(--size-p-small) + 0.7vw);
+}
+
+footer {
+    background-color: var(--footer-color);
+    color: var(--dark-color);
+    margin-top: 5vw;
+    padding: 5vw 50px;
+}
+
+.footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-navigation {
+    display: flex;
+    gap: 8vw;
+}
+
+footer nav ul {
+    flex-direction: column;
+}
+
+footer nav a {
+    font-weight: var(--font-regular);
+    font-size: var(--size-footer-nav);
+}
+
+footer p {
+    font-weight: var(--font-semi-bold);
+    font-size: calc(var(--size-footer-nav) - 0.1vw);
+}
